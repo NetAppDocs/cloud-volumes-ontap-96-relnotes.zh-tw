@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-gcp.html 
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes 
+summary: 可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP有兩種定價選項可供選擇、一次性付費、一次性自帶授權（BYOL）。 
+---
+= Google Cloud支援的組態
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP提供兩種定價選項：隨用隨付、自帶授權（BYOL）。
+
+
+
+== 隨用隨付總覽
+
+* 提供下列三種不同的授權選項：Explore、Standard和Premium。Cloud Volumes ONTAP
+* 您Cloud Volumes ONTAP 可在Google Cloud部署的第一個版本為免費試用30天。
++
+** 不需支付每小時軟體費用、但Google Cloud基礎架構仍需支付費用（運算、儲存設備和網路）。
+** 當免費試用結束時、您將根據所選授權、每小時收取一次費用。 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager["只要您訂閱"^]。如果您尚未訂閱、系統會關閉。
+
+
+* 目前不支援從PAYGO到BYOL的轉換。
+* 提供基本技術支援、但您必須註冊並啟動與系統相關的NetApp序號。
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-registering.html["在Cloud Manager中註冊隨用隨付系統"^]
+
+
+
+
+
+== BYOL總覽
+
+* 單一節點授權、含12個月、24個月及更多的定期訂購選項。
+* 訂閱期間內包含支援服務。
+* 您可以購買 Cloud Volumes ONTAP 多個適用於某個不含資料的 BYOL 系統授權、以配置超過 368TB 的容量。
++
+例如、您可能會購買兩份授權、以配置多達 736 TB 的容量來 Cloud Volumes ONTAP 供參考。您也可以購買四份授權、最多可取得1.4 PIB。
+
+
+
+
+
+== 依授權支援的組態
+
+可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP
+
+[cols="h,d,d,d,d"]
+|===
+|  | 瀏覽 | 標準 | 優質 | BYOL 
+
+
+| 支援的機器類型：^1^ | Custom-4-16384 | N1-標準8 | N1-標準32  a| 
+* Custom-4-16384
+* N1-標準8
+* N1-標準32
+
+
+
+
+| 支援的磁碟類型^2^ 4+| 分區持續磁碟（SSD和標準） 
+
+
+| 將冷資料分層至物件儲存設備 | 不支援 3+| 支援 
+
+
+| 最大系統容量（磁碟+物件儲存） | 2 TB | 10 TB | 368TB ^3^ | 每個授權容量368TB ^3^ 
+|===
+附註：
+
+. 自訂機器類型有4個vCPU和16 GB記憶體。如需標準機器類型的詳細資訊、請參閱 https://cloud.google.com/compute/docs/machine-types#standard_machine_types["Google Cloud文件：機器類型"^]。
+. 使用SSD時可啟用增強的寫入效能。
+. 磁碟限制可防止您僅使用磁碟而達到368TB容量限制。容量上限可達368TB https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["將非作用中資料分層至物件儲存設備"^]。
++
+link:reference-limits-gcp.html["深入瞭解Google Cloud的磁碟限制"]。
+
+. 如需Google Cloud Platform區域支援、請參閱 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]。
+
+
+
+
+== 支援的磁碟大小
+
+在Google Cloud中、Aggregate最多可包含6個相同類型和大小的磁碟。支援下列磁碟大小：
+
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+

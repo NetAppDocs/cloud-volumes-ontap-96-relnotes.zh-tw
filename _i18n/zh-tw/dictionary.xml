@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="c28d38eab2723d5b03a4a9a583f5c81e" category="summary">這些已知的限制僅適用於Cloud Volumes ONTAP Amazon Web Services中的某些功能。</block>
+  <block id="65a320b4c12bea4be3d7391ed581adef" category="doc">AWS的已知限制</block>
+  <block id="fc5c1a5c8028c4da4d0b0de1a9b1df3d" category="inline-link-macro">所有雲端供應商的限制</block>
+  <block id="68cc22abcb24fb488399f1364a61ac86" category="paragraph">下列已知限制僅適用於Cloud Volumes ONTAP Amazon Web Services的功能。請務必同時檢閱 <block ref="3c5bba9e6532aaf7c9c167664226f819" category="inline-link-macro-rx"></block>。</block>
+  <block id="a0cf071b9038a23221cd589c25d7e392" category="section-title">Flash Cache限制</block>
+  <block id="032ad17d65f47ce036675718d3986c48" category="paragraph">C5D和R5D執行個體類型包括本機NVMe儲存設備、Cloud Volumes ONTAP 可做為_Flash Cache。請注意下列限制：</block>
+  <block id="341cc964e0c52fec40f9705182116dda" category="list-text">所有磁碟區都必須停用壓縮、才能充分發揮 Flash Cache 效能的改善效益。</block>
+  <block id="405cb575e50b611a22ec99d1abb3f202" category="inline-link">使用 CLI 停用資料壓縮</block>
+  <block id="e7c76e369ac11cd66c4eb87009b46b45" category="paragraph">從Cloud Manager建立磁碟區時、您可以選擇「無儲存效率」、也可以先建立磁碟區、然後再建立<block ref="41233aab48d70287f1bbc60d78ce6eab" category="inline-link-rx"></block>。</block>
+  <block id="444f10b28a63ab25d9664d0647602d07" category="list-text">重新開機後的快取重新溫熱功能不支援 Cloud Volumes ONTAP 使用此功能。</block>
+  <block id="c564897ef3b9328940c3edd5bc917926" category="section-title">Amazon CloudWatch回報的誤報</block>
+  <block id="4b88d56bd65ef92611ac63064c38369f" category="inline-link">Amazon CloudWatch</block>
+  <block id="a23b1ce34926ce9e5d8867b831892dbc" category="paragraph">當閒置時、不釋放CPU Cloud Volumes ONTAP<block ref="72a40ee21b60b90e7ca12bb4a1f5b009" category="inline-link-rx"></block> 可針對EC2執行個體回報高CPU警告、因為它能看到100%的使用率。您可以忽略此警報。使用「flex統計 資料」命令可顯示CPU的實際使用量。ONTAP</block>
+  <block id="1de430b06ad7ac64cf016ffed9f4194b" category="section-title">不支援立即儲存恢復的部分Cloud Volumes ONTAP</block>
+  <block id="d69dddad3d38a1500a52e7e599cb94df" category="paragraph">節點重新開機後、合作夥伴必須先同步資料、才能退回儲存設備。重新同步資料所需的時間取決於節點當機時用戶端寫入的資料量、以及恢復期間的資料寫入速度。</block>
+  <block id="ac1c2f0887629ee768721c3b8cf91e3a" category="inline-link">瞭解儲存設備如何在Cloud Volumes ONTAP AWS上執行的一套功能不只是一套</block>
+  <block id="1ede57873000993784f510b4546c1c3f" category="paragraph"><block ref="946966cdbb5ad64ec13d8ce9c3014b31" category="inline-link-rx"></block>。</block>
+  <block id="feb49be8ef50e34ae8a47a5369859187" category="section-title">AWS C2S環境的限制</block>
+  <block id="286cc15dc9f73773a029b936b2788c19" category="inline-link">開始使用AWS C2S環境</block>
+  <block id="e1fd46c84609b96f4458729b4ee8c5ea" category="paragraph">檢視Cloud Manager文件中的限制：<block ref="fd45e509325fef59e1c268c2f62eedf4" category="inline-link-rx"></block></block>
+  <block id="3bee858ea6f0b72c5c39cb3bd1c441f0" category="section-title">AWS GovCloud（美國）地區的限制</block>
+  <block id="cb272a6dc5e534974a2ae26644e5635f" category="list-text">如果您想要在Cloud Volumes ONTAP 任何AWS GovCloud（美國）區域中啟動執行個體、Cloud Manager必須部署在AWS GovCloud（美國）區域。</block>
+  <block id="77cc64ce7fdafcda7deefa3aa250801c" category="list-text">當部署於AWS GovCloud（美國）區域時、Cloud Manager無法在ONTAP 適用於Microsoft Azure組態的NetApp私有儲存設備或適用於SoftLayer組態的NetApp私有儲存設備中探索到各種非功能叢集。</block>
+  <block id="a9f27c00250c46c26cb8db62812585a9" category="summary">這些版本說明Cloud Volumes ONTAP 介紹有關功能、限制和已知問題的資訊。</block>
+  <block id="001a55affa5f48701656447cc466491a" category="doc">發行說明Cloud Volumes ONTAP</block>
+  <block id="38c460995e0edbe604d8fe4c32af0cd1" category="summary">Azure提供PAYGO和BYOL組態的適用範本。Cloud Volumes ONTAP若為PAYGO、您可以選擇Explore、Standard或Premium。</block>
+  <block id="e4b60b51b40a0907e38b3293d36780e6" category="doc">Azure支援的組態</block>
+  <block id="d5b2af892d200485c2e56ace1a1f077a" category="paragraph">Azure提供下列兩種定價選項：隨用隨付及自帶授權（BYOL）Cloud Volumes ONTAP 。對於隨用隨付的方案、您可以從三種組態中選擇：Explore、Standard或Premium。</block>
+  <block id="c334038ed8a782403ae705a8de1f584b" category="section-title">依授權支援的組態</block>
+  <block id="9f1dc929787c1a2d05667987a87c083b" category="paragraph">Azure中提供的支援可作為單一節點系統、以及高可用度（HA）節點配對、以提供容錯能力和不中斷營運。Cloud Volumes ONTAP</block>
+  <block id="ffe182d798fac96ff130cb1500052036" category="paragraph">不支援將單一節點系統升級為HA配對。如果您想在單一節點系統和HA配對之間切換、則需要部署新系統、並將資料從現有系統複寫到新系統。</block>
+  <block id="078325cc35a9c8c9290e445f32bd1855" category="section-title">單一節點系統</block>
+  <block id="c817f6adbd40857622b1c5875284dccf" category="paragraph">當您在Cloud Volumes ONTAP Azure中部署以單節點系統的方式部署時、可以從下列組態中進行選擇：</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
+  <block id="1819001b72329e2ef5799fe504238035" category="cell">瀏覽</block>
+  <block id="eb6d8ae6f20283755b339c0dc273988b" category="cell">標準</block>
+  <block id="8d5e7e72f12067991186cdf3cb7d5d9d" category="cell">優質</block>
+  <block id="b650b6a0e30782e5c59c3db6f2644347" category="cell">BYOL</block>
+  <block id="333cde16cf112bb117788fe2729a875c" category="cell">支援的虛擬機器類型</block>
+  <block id="2be187f608e3ad4af24d83ba1557f439" category="cell">DS3_v2</block>
+  <block id="83eca86ff243df4e1646a92d7c304973" category="list-text">DS4_v2</block>
+  <block id="1388ff45ca6939d3ddda6032143844f9" category="list-text">DS13_v2</block>
+  <block id="d5dcfd54bc69651d879cec73cf9d8daa" category="list-text">DS5_v2</block>
+  <block id="b72144fa0a4e25809ce8fa02430673a7" category="list-text">DS14_v2</block>
+  <block id="f09d01e9299f4f1d66eff1fb0b840c5c" category="list-text">DS15_v2</block>
+  <block id="e1cefe847c01cc0e030bd0fb91a17791" category="cell">支援的磁碟類型^1^</block>
+  <block id="19482872b5fad6ff5e1e34947a759a98" category="cell">標準HDD託管磁碟、標準SSD託管磁碟和優質SSD託管磁碟</block>
+  <block id="0b18b27a719f6faaf241f4b0651d936f" category="cell">冷資料分層至Blob儲存設備</block>
+  <block id="aa7f77e663b832d5b0e544c5511e680c" category="cell">不支援</block>
+  <block id="eaa4dc5078017a5c5bebf383ab6f5124" category="cell">支援</block>
+  <block id="e02cfa40e076b3e2d41b29974af36f06" category="cell">最大系統容量（磁碟+物件儲存）</block>
+  <block id="7916f32f06eaabdf61df576419c0c138" category="cell">2 TiB</block>
+  <block id="4a67bdd5f30eeac9ad064fc6433dc926" category="cell">10 TiB</block>
+  <block id="61dcfaac24363a16e4b318c1317f0309" category="cell">368TiB</block>
+  <block id="7751129b8546a0da65fb379b1cc9c243" category="cell">每個授權368TiB</block>
+  <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">附註：</block>
+  <block id="a63be6f12cd03be8e118239f1f944bda" category="list-text">使用SSD時會啟用增強寫入效能、但使用DS3_v2虛擬機器類型時則不會啟用。</block>
+  <block id="a3f8304ab1695053d71855c60f8abf63" category="inline-link">Cloud Volumes全球區域</block>
+  <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">如需Azure地區支援、請參閱<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
+  <block id="b049fcbe8198301adc6bf87634a02845" category="section-title">HA 配對</block>
+  <block id="a2f04bcb45cecb780dad3d2795f4e080" category="paragraph">在Cloud Volumes ONTAP Azure中部署以HA配對形式部署的時、您可以從下列組態中進行選擇：</block>
+  <block id="3e7433721426ddc5bb6007a1f480b7e0" category="cell">支援的磁碟類型</block>
+  <block id="8dbeeeefc901c0dbb39a9c1332aaeeb9" category="cell">優質網頁</block>
+  <block id="1aba6da18a135e35cdb1f37bded610ee" category="cell">冷資料分層至Blob儲存設備^2^</block>
+  <block id="36e4aa065725aff22926f2fed53bc3c7" category="section-title">支援的磁碟大小</block>
+  <block id="88d444d836b2ea3ca342f4cc3a6b2b50" category="paragraph">在Azure中、Aggregate最多可包含12個相同類型和大小的磁碟。</block>
+  <block id="90d1dad6ac7388ba65631ec0b927dabc" category="paragraph">單一節點系統使用Azure託管磁碟。支援下列磁碟大小：</block>
+  <block id="fac18bfae2384f6eccc3a9779ce41d25" category="cell">優質SSD</block>
+  <block id="be08eab34bc0f034d51f82767686b3b7" category="cell">標準SSD</block>
+  <block id="ef80fe66906aa69c663bc559d808a821" category="cell">標準HDD</block>
+  <block id="5930fa6915753c61e8ef266f7efef7f6" category="list-text">500 GiB</block>
+  <block id="4e5cad9a39114e168c84b904c78fec9d" category="list-text">1 TiB</block>
+  <block id="09db5cf9dee1953ac746dd636e0db3e0" category="list-text">4 TiB</block>
+  <block id="094077c0211aa5522341d3db94bc6419" category="list-text">8 TiB</block>
+  <block id="ec74a96b5afa8d112b06af3bec8272c2" category="list-text">16 TiB</block>
+  <block id="d556a98bff3e1e758e87dd72b174feca" category="list-text">32 TiB</block>
+  <block id="d47eab2f6c8443515b4726d2c0efbcec" category="list-text">100 GiB</block>
+  <block id="06d3fc3294e112a437e3671e10ecf0c3" category="paragraph">HA配對使用優質網頁瀏覽器。支援下列磁碟大小：</block>
+  <block id="b65d0b4f1fe8d0578485dbfad28ca2c7" category="summary">在AWS中提供PAYGO和BYOL組態。Cloud Volumes ONTAP若為PAYGO、您可以選擇Explore、Standard或Premium。</block>
+  <block id="8bb0da4c260f565e0c8162ea9c2b7caa" category="doc">AWS支援的組態</block>
+  <block id="bdd05a6434dc2ca8082ad2d5a269c7f3" category="paragraph">AWS提供下列兩種定價選項：隨用隨付及自帶授權（BYOL）Cloud Volumes ONTAP 。對於隨用隨付的方案、您可以從三種組態中選擇：Explore、Standard或Premium。</block>
+  <block id="a0a1c13507a24083c5a835cbc79ea6c7" category="paragraph">AWS可在單一節點系統中使用、也可作為高可用度（HA）節點配對、以提供容錯功能和不中斷營運。Cloud Volumes ONTAP</block>
+  <block id="1633a465cdfacd7f070b0de173f5a982" category="cell">支援的EC2執行個體類型為^1^</block>
+  <block id="b315e87fe13b3c2bfc23cd6e95c4d7d9" category="list-text">m4.xlarge</block>
+  <block id="af5930828f5a5fb8d4c21928b5ccdd0d" category="list-text">M5.xLarge</block>
+  <block id="b4cd677d00e2a06b3556b8a40415f793" category="list-text">m4.2xLarge</block>
+  <block id="fdb9b168c2139e67e282db861cf21967" category="list-text">m5.2xLarge</block>
+  <block id="824948b89484cfc1904fd5a42bd21699" category="list-text">r4.xlarge</block>
+  <block id="e1369dc9aee5f7165363f55d10884546" category="list-text">R5.xlarge</block>
+  <block id="c99d0382ccb24aa084764b2dd4e3b426" category="list-text">c4.4xlarge</block>
+  <block id="3f997ef144f48e4b699d961d57f3c225" category="list-text">c4.8xlarge</block>
+  <block id="bccfea3b653422d5fd8560cff3483d5b" category="list-text">c5.9xlarge</block>
+  <block id="c5349a9d783e985390617543cf910af4" category="list-text">c5.18xlarge</block>
+  <block id="f109036862b7e36b03ce748f5270da15" category="list-text">c5d.4xlarge ^2^</block>
+  <block id="1a538d8b40effd0a65ed56b7899e84ec" category="list-text">c5d.9xlarge ^2^</block>
+  <block id="fb71f55fbd58f110dea6ca8b4186aba0" category="list-text">c5d.18xlarge ^2、3</block>
+  <block id="44963cb40f2d3d493c1176db3813e069" category="list-text">m4.4xlarge</block>
+  <block id="6124944413e19a98a7cefa988e91f90e" category="list-text">M5.4xLarge</block>
+  <block id="5cf13c23fdb2bb2f755545ce4b7a7139" category="list-text">m5d.8xlarge ^2、3</block>
+  <block id="e630bf936b5ba73baa7f14780de62d9e" category="list-text">r4.2xlarge</block>
+  <block id="859e8cd8d7a83d36983b0e9860a11e84" category="list-text">r5.2xlarge</block>
+  <block id="63eb1ab7826eb9fd0c46ae8c607762c7" category="list-text">r5d.2xlarge ^2^</block>
+  <block id="233d7152c6f49c17f5310a33fd5a0139" category="cell">支援的磁碟類型^4^</block>
+  <block id="3f6ed0ebf44d28e7eb4b3c36f8a12264" category="cell">通用SSD（gp2）^5^、已配置的IOPS SSD（IO1）和處理量最佳化的HDD（ST1）</block>
+  <block id="1f742543feb3ee22b577a40afbb960a2" category="cell">冷資料分層至S3</block>
+  <block id="cf7b10e4a65de32dffc11623270eac8c" category="cell">368TiB ^5^</block>
+  <block id="d606adfd98bb596dbf3548eb7c49f694" category="cell">每個授權368TiB（每個授權）^5^</block>
+  <block id="9de28fbf6817cd511eb799f9575b611d" category="list-text">當您選擇EC2執行個體類型時、可以指定它是共用執行個體或專屬執行個體。</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">深入瞭解</block>
+  <block id="f764c9bb95bb4d7bbb4fe4822b76fa57" category="list-text">這些執行個體類型包括本機NVMe儲存設備、Cloud Volumes ONTAP 這些儲存設備使用作_Flash Cache。Flash Cache 可透過即時智慧快取來加速資料存取、快取最近讀取的使用者資料和 NetApp 中繼資料。它適用於隨機讀取密集的工作負載、包括資料庫、電子郵件和檔案服務。所有磁碟區都必須停用壓縮、才能充分發揮 Flash Cache 效能的改善效益。 <block ref="30a279733c02f3f1aac8cf48b2a7771d" category="inline-link-macro-rx"></block>。</block>
+  <block id="604060505017d5158d69a9aff72c4e83" category="list-text">支援c5d.18xlarge和m5d.8xlarge、從Cloud Volumes ONTAP 推出支援的功能為</block>
+  <block id="0c4c4e63836f218793463e3bcdaddf27" category="list-text">使用SSD搭配Cloud Volumes ONTAP 使用時、會啟用增強的寫入效能、包括「支援不一致的標準」、「優質」和「BYOL」。</block>
+  <block id="3de497f7f0c3d4c077d3911a90241bdb" category="list-text">不支援GP3 SSD。</block>
+  <block id="9cb3b0db1f5a7a0032a165789bcde1dd" category="inline-link-macro">儲存限制</block>
+  <block id="ba23388576c937a1743b84554bd13c72" category="inline-link">將非作用中資料分層至物件儲存設備</block>
+  <block id="a80ff77ce9dbd5f7918811dad8935e62" category="list-text">對於某些HA組態、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。如需磁碟限制的相關資訊、請參閱 <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>。</block>
+  <block id="4375839c669e051e5f2a8de11ba0c5d0" category="list-text">如需AWS區域支援、請參閱<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
+  <block id="f1ef8a69abb63b240d611c09ea5ddde6" category="paragraph">在AWS中、Aggregate最多可包含6個相同類型和大小的磁碟。</block>
+  <block id="eaa2d3a786327e0ea77b42c648bf6007" category="cell">通用SSD（gp2）</block>
+  <block id="c50feb3c9ed89b38a1757f8a63ccd0a6" category="cell">已配置的IOPS SSD（IO1）</block>
+  <block id="b097d252160f5ccb21350abbc9a2d37d" category="cell">處理量最佳化的HDD（ST1）</block>
+  <block id="b23de6890dfc4a44067a64513c3d5411" category="list-text">6 TiB</block>
+  <block id="34515f1d88b10d0db0a78eba6c533394" category="summary">已知問題可識別可能導致您無法成功使用本產品版本的問題。</block>
+  <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">已知問題</block>
+  <block id="514c35ac615c3426962d39f27b71014b" category="paragraph">本版本Cloud Volumes ONTAP 中沒有任何特定於此版本的已知問題。</block>
+  <block id="626a7cbe056796bcb1c158b143866230" category="inline-link">發行說明 ONTAP</block>
+  <block id="398d7dd4fa02e30dc6322ad98eff7d2b" category="paragraph">您可以在中找到ONTAP 有關的已知問題<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>。</block>
+  <block id="1eba71d64e6c5e410e558530711e835b" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。</block>
+  <block id="a20ea8590a5bc20c473682a1138198a0" category="paragraph">下列限制適用於Cloud Volumes ONTAP 所有雲端供應商的解決方案：AWS、Azure和Google Cloud。</block>
+  <block id="4ab1be901507467113ec58325fc4e033" category="section-title">最大並行複寫作業數</block>
+  <block id="55daffc7827b6ec74240106a8f647473" category="paragraph">無論執行個體類型或機器類型為何、每個節點的並行SnapMirror或SnapVault 支援Cloud Volumes ONTAP 物件傳輸數量上限為100。</block>
+  <block id="d302a39827e370146d2861389e98e60c" category="section-title">中國地區的支援</block>
+  <block id="da059bd73f7531380888607adbbd03aa" category="paragraph">支援中國地區的下列項目。Cloud Volumes ONTAP</block>
+  <block id="cbf02fb0cb394b4b19fb0788f9b62554" category="list-text">支援AWS中國地區的支援區域為支援區域9.6。Cloud Volumes ONTAP</block>
+  <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">支援單一節點系統。</block>
+  <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">支援直接向NetApp購買的授權。</block>
+  <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">不支援所有其他位置、版本、組態和授權。</block>
+  <block id="1d7a5501cfb31aff808abb63ef9085c2" category="section-title">軟體更新必須由Cloud Manager完成</block>
+  <block id="93e3c3d0ea43d600b3c3cd4548ea3987" category="paragraph">必須從 Cloud Manager 完成升級。 Cloud Volumes ONTAP您不應 Cloud Volumes ONTAP 使用 System Manager 或 CLI 來升級功能。這樣做可能會影響系統穩定性。</block>
+  <block id="cbc4bd981852b46f0fbf6e6a6d4ed5af" category="section-title">不得從雲端供應商的主控台修改部署Cloud Volumes ONTAP</block>
+  <block id="5f706f3e7b360cd0d02bd068f4ba9afa" category="paragraph">從Cloud Volumes ONTAP 雲端供應商的主控台變更支援的支援功能組態、會導致不受支援的組態設定。Cloud Manager所建立及管理的任何更新、都可能影響系統穩定性及Cloud Manager管理系統的能力。Cloud Volumes ONTAP</block>
+  <block id="871cdf07a10d1cc27cb3166e7a820a66" category="section-title">磁碟和集合體必須從Cloud Manager進行管理</block>
+  <block id="dbdb55d3acfbb139cd66db544b19d738" category="paragraph">所有磁碟和集合體都必須直接從 Cloud Manager 建立和刪除。您不應從其他管理工具執行這些動作。這樣做可能會影響系統穩定性、阻礙未來新增磁碟的能力、並可能產生備援雲端供應商費用。</block>
+  <block id="4d2719ea5599a5bf1a9973d3b247f959" category="section-title">不受授權限制SnapManager</block>
+  <block id="c91bb6f1740b2a7b3e274deca5e32b94" category="paragraph">支援以伺服器為單位的各個伺服器授權。SnapManager Cloud Volumes ONTAP不SnapManager 支援每個儲存系統（不支援此套件）授權。</block>
+  <block id="c3f5fdee9b6adb6eccff2d4c189ead12" category="section-title">不支援ONTAP 的支援功能</block>
+  <block id="534cab245a3cc0ececa966044bad6ba2" category="paragraph">下列功能Cloud Volumes ONTAP 不支援使用下列功能：</block>
+  <block id="a031ea731cd3c4992b7f33bad9f72a00" category="list-text">Aggregate層級即時重複資料刪除技術</block>
+  <block id="98e2e51de88bd2dae78a66fdad91936c" category="list-text">Aggregate層級背景重複資料刪除技術</block>
+  <block id="5873635ff256383dcb0b47a0e49f71b1" category="list-text">磁碟維護中心</block>
+  <block id="ddf5f13c3a2f670d7fd623c41af1d112" category="list-text">磁碟資料抹除</block>
+  <block id="5903a917b575023b60264c602c220771" category="list-text">光纖通道（FC）</block>
+  <block id="19f331bf338a964b49dd874ec165f553" category="list-text">Flash資源池</block>
+  <block id="f8f6de059b38ff18eef47014d953c662" category="list-text">無限Volume</block>
+  <block id="09ab988c99cc61af08cebf0d39a00ac5" category="list-text">介面群組</block>
+  <block id="ac140a63a61ac75e47b5b4ef17eec52d" category="list-text">內部網路模式LIF容錯移轉</block>
+  <block id="1749d12df3df2319d3eee218a277ff83" category="list-text">MetroCluster</block>
+  <block id="b55b56ade65204a678bf4727dbda623f" category="list-text">多租戶（僅支援一個資料服務SVM）</block>
+  <block id="951de4e4bdae5ad5598a048ed6a6f1e3" category="list-text">RAID4、RAID-DP、RAID-TEC 功能（支援RAID0）</block>
+  <block id="0ec5130d573357ea4d244f018e39ae85" category="list-text">服務處理器</block>
+  <block id="9e13198f9131eed7b39e47425df55fdb" category="list-text">支援一致性與企業模式（僅支援Cloud WORM）SnapLock</block>
+  <block id="974658d7ac018cb945e78365b0a760fb" category="list-text">SnapMirror同步</block>
+  <block id="87495e311a3944910e3cc0c7bee3d754" category="list-text">VLAN</block>
+  <block id="d634bf53c207457b9f979a3511629617" category="doc">Google Cloud的已知限制</block>
+  <block id="02c6db07568f707d210dadcbcddd5ea8" category="paragraph">Google Cloud Platform並無Cloud Volumes ONTAP 特定於功能性的已知限制。請參閱 <block ref="3c5bba9e6532aaf7c9c167664226f819" category="inline-link-macro-rx"></block>。</block>
+  <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">在Azure中、由於儲存組態限制、因此可提供可靠的作業。Cloud Volumes ONTAP為獲得最佳效能、請勿將系統設定為最大值。</block>
+  <block id="e622ddac1a96836929babb5b993749ba" category="doc">Azure的儲存限制</block>
+  <block id="b3dfe19c7d46d1f8795ac17bf3d5a909" category="paragraph">提供可靠作業的儲存組態限制。Cloud Volumes ONTAP為獲得最佳效能、請勿將系統設定為最大值。</block>
+  <block id="ecedb9353641e4bd058af0268a6edce8" category="section-title">依授權提供的最大系統容量</block>
+  <block id="7de15f2416b1b598e771303381d1179e" category="paragraph">整個系統的最大容量Cloud Volumes ONTAP 取決於其授權。最大系統容量包括磁碟型儲存設備、以及用於資料分層的物件式儲存設備。NetApp不支援超過此限制。</block>
+  <block id="794df3791a8c800841516007427a2aa3" category="cell">授權</block>
+  <block id="643a529396d04bbbe61c8daa70456163" category="cell">最大系統容量（磁碟+物件儲存）</block>
+  <block id="768560d8110ed230b7fde848941af107" category="cell">2 TiB（Explore不支援資料分層）</block>
+  <block id="2f9882645b2c32820ad085240bacb763" category="section-title">對於HA、每個節點或整個HA配對的授權容量限制是多少？</block>
+  <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量限制適用於整個HA配對。不是每個節點。例如、如果您使用Premium授權、則兩個節點之間最多可有368TiB的容量。</block>
+  <block id="e6607992aca7a2cd8b89f152b0cf553d" category="section-title">磁碟和分層限制、依VM大小而定</block>
+  <block id="18c6b28bc02beb7622f0bb787dd32727" category="paragraph">下列磁碟限制僅適用於包含使用者資料的磁碟。限制不包括開機磁碟和根磁碟。下表顯示使用磁碟或獨立磁碟、以及磁碟和冷資料分層至物件儲存設備的VM大小最大系統容量。</block>
+  <block id="d9a2e3a619d7662717e85f73915cfcd1" category="paragraph">磁碟限制僅會以Premium和BYOL授權的VM大小來顯示、因為系統容量限制、無法使用Explore或Standard授權達到磁碟限制。</block>
+  <block id="f114a72e19307d64279cad76172579f0" category="list-text">單一節點系統可使用標準HDD託管磁碟、標準SSD託管磁碟和優質SSD託管磁碟、每個磁碟最多32 TiB。支援的磁碟數量會因VM大小而異。</block>
+  <block id="bb8cb4958d23b69d96d3891aa7ae598a" category="list-text">HA系統使用優質頁面區塊做為磁碟、每頁區塊最多8個TiB。支援的磁碟數量會因VM大小而異。</block>
+  <block id="129e3a061f7870067c1e133ba0a412f2" category="section-title">具有Premium授權的單一節點</block>
+  <block id="50c51ed959c686d478aaf3f5e64ce255" category="cell">VM大小</block>
+  <block id="4f42986706a322f09678a2f25be54dd9" category="cell">每個節點的磁碟數上限</block>
+  <block id="a9b87ab892cc3b768d5fb6b4d85fcdd5" category="cell">僅使用磁碟就能達到最大系統容量</block>
+  <block id="ed25cf65ff8cb4908d3211e5fc114a11" category="cell">利用磁碟和資料分層來最大化系統容量</block>
+  <block id="03afdbd66e7929b125f8597834fa83a4" category="cell">63.</block>
+  <block id="6e750179eece22bc5190120e36818824" category="section-title">具有一或多個BYOL授權的單一節點</block>
+  <block id="5eea1e25ada5f639be60cd3747453706" category="admonition">對於某些VM類型、您需要數個BYOL授權、才能達到下列系統容量上限。例如、您需要6份BYOL授權、才能使用DS5_v2達到2個PIB。</block>
+  <block id="aaa9a5ed21c4e4c107aab47a353049bc" category="cell">單一授權即可達到最大系統容量</block>
+  <block id="cabc996760a00c42a2b15b388054d050" category="cell">最多可容納多個授權的系統容量</block>
+  <block id="bb49543449782c0f1b87b3ef8f49a6be" category="cell">*單獨磁碟*</block>
+  <block id="e3185eb0708df4883935910ebf26f8db" category="cell">*磁碟+資料分層*</block>
+  <block id="9bf31c7ff062936a96d3c8bd1f8f2ff3" category="cell">15</block>
+  <block id="caa04f6c0c961ead7ba1a22b65f58bb8" category="cell">480 TiB</block>
+  <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">每個授權使用368TiB</block>
+  <block id="c16a5320fa475530d9583c34fd356ef5" category="cell">31</block>
+  <block id="cfd3d7471481ba0d3a23470409857d68" category="cell">992 TiB</block>
+  <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 PIB</block>
+  <block id="2fe12d2fbca1ad427f800563e85d7942" category="section-title">HA與Premium授權配對</block>
+  <block id="7d77a94398a1ae91747e4416328465b2" category="cell">HA配對的實體磁碟MAX Data</block>
+  <block id="183b55779c8f5a10d03cb5478314926d" category="section-title">HA與一或多個BYOL授權配對</block>
+  <block id="cace811ae2287679ba0f4404384f7d4a" category="cell">248-TiB</block>
+  <block id="2a89dad2f01452e56c98b1118448e1f1" category="cell">504 TiB</block>
+  <block id="77da8ca35e02ab32c9b48e9f632913bf" category="section-title">Aggregate限制</block>
+  <block id="90f7fe115847c067cf4c52892efe18db" category="paragraph">使用Azure儲存設備做為磁碟、並將其分組為_aggregate。Cloud Volumes ONTAPAggregate可為磁碟區提供儲存設備。</block>
+  <block id="83f499a540b1323009c200d6f8cc9396" category="cell">參數</block>
+  <block id="80d2677cf518f4d04320042f4ea6c146" category="cell">限制</block>
+  <block id="82420b01cfee82b0c54b049d0dbfad9f" category="cell">最大集合體數</block>
+  <block id="5c30cd6f860f45d6afe45be1d1477f62" category="cell">與磁碟限制相同</block>
+  <block id="fb036cbd7d294e0cb30d09908d1a5107" category="cell">最大Aggregate大小</block>
+  <block id="de3e9d13e7280117368a2ab174e3e224" category="cell">用於單一節點的原始容量為352 TiB、HA配對的原始容量為^^2 ^ 96 TiB ^1^</block>
+  <block id="c540b9e7edec4adafdaa9dff60f7a893" category="cell">每個集合體的磁碟數</block>
+  <block id="fd09e7b7125ae29e623561a2b5d68449" category="cell">1-12^3^</block>
+  <block id="4ab1bc7e6fe6c19a70cc9470efcb6c1e" category="cell">每個Aggregate的RAID群組數目上限</block>
+  <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1.</block>
+  <block id="a870388a8127cdf99988ab2766dc4972" category="list-text">Aggregate容量限制是根據組成Aggregate的磁碟而來。此限制不包括用於資料分層的物件儲存設備。</block>
+  <block id="fc7df49871764c5cd01bcf7c8307c597" category="list-text">支援從9.6 P3開始的352 TiB限制。9.6 P3之前的版本可在單一節點系統上、在一個集合體中支援高達200 TiB的原始容量。</block>
+  <block id="a40e4d3ab198f5d9c9e23e409e7abae3" category="list-text">集合體中的所有磁碟大小必須相同。</block>
+  <block id="41a0b1e6c6d31716c7d7b603ce6a4936" category="section-title">邏輯儲存限制</block>
+  <block id="609158be2075d0d9724b333b2cf217be" category="cell">邏輯儲存設備</block>
+  <block id="73a985be794327e4a037c64d0184774a" category="cell">*儲存虛擬機器（SVM）*</block>
+  <block id="835d5536792339ec4a51105123601003" category="cell">最大Cloud Volumes ONTAP 數目（HA配對或單一節點）</block>
+  <block id="b2734f21c300d02359bdc60073cc3bc5" category="cell">一個資料服務SVM和一個目的地SVM、用於災難恢復。如果來源SVM發生中斷、您可以啟動目的地SVM進行資料存取。一部資料服務SVM橫跨Cloud Volumes ONTAP 整個整個作業系統（HA配對或單一節點）。</block>
+  <block id="ada4ff97f4dda398688956bbaf1ce0aa" category="cell">*檔案*</block>
+  <block id="acfc7717e24258e6355ba4036bf1654d" category="cell">最大尺寸</block>
+  <block id="5fde77af1cc98552a17479ea4938c6ed" category="cell">每個Volume的最大值</block>
+  <block id="6658f671a312c005fd3f0bde5aaba9ae" category="cell">磁碟區大小視情況而定、高達20億</block>
+  <block id="acc9d26dccf8fcf5c9981e0276173b11" category="cell">* FlexClone Volumes *</block>
+  <block id="fa6258f6bacddead986c2cbf9e97e512" category="cell">階層式複製深度^2^</block>
+  <block id="3cf166c6b73f030b4f67eeaeba301103" category="cell">499年</block>
+  <block id="d8d8f4430afb6c5dda89bc1fbd1911b8" category="cell">*《*》卷* FlexVol</block>
+  <block id="02987178f371226dd1e6ace7f7e0b273" category="cell">每個節點的最大值</block>
+  <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
+  <block id="9dba50d3a2c2f26daddbf9d144c49772" category="cell">最小尺寸</block>
+  <block id="e2fca4ed20d01d1eda8a934cf81cb194" category="cell">20 MB</block>
+  <block id="87338ad799bddd85c6298bb9270dc27f" category="cell">100 TiB</block>
+  <block id="f870c45bb6c4b8bad8f13c8dc3439f98" category="cell">* qtree *</block>
+  <block id="8032f0290a7c4e00a6da3a195523a94e" category="cell">每FlexVol 個速度區塊的最大值</block>
+  <block id="38de34e4b49b8adfeb2c678818915204" category="cell">4、995</block>
+  <block id="1a07b3809a1ae9afeb461f935181ced5" category="cell">* Snapshot複本*</block>
+  <block id="e8bd298f1a45dbe18647bf02f27ac92e" category="cell">1、023</block>
+  <block id="f930216066584d74a1d100b4781661f9" category="list-text">Cloud Manager不提供任何SVM災難恢復的設定或協調支援。它也不支援其他SVM上的儲存相關工作。您必須使用System Manager或CLI進行SVM災難恢復。</block>
+  <block id="412af2a2404a4e920b18be59197204b0" category="inline-link">SVM 災難恢復準備快速指南</block>
+  <block id="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="list-text"><block ref="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="inline-link-rx"></block></block>
+  <block id="a06e9c241b02eb678d35f19c0eec257f" category="inline-link">SVM Disaster Recovery Express 指南</block>
+  <block id="84e6a974fd77c552b4d54c8a9b0727ab" category="list-text"><block ref="84e6a974fd77c552b4d54c8a9b0727ab" category="inline-link-rx"></block></block>
+  <block id="b4eacaee3fd29fd401387ce7ccd891ae" category="list-text">階層式複製深度是FlexClone Volume的巢狀階層架構深度上限、可從單FlexVol 一的實體磁碟區建立。</block>
+  <block id="ec8aa8d5c4770248f40bea57751b61ef" category="section-title">iSCSI儲存限制</block>
+  <block id="a00bd30f35d2e0308f1c006da5cee5f6" category="cell">iSCSI儲存設備</block>
+  <block id="10c47847009b4c424d942318791fd6ff" category="cell">* LUN*</block>
+  <block id="a980f22074119d4103953f70f2fd69ce" category="cell">1 、 024</block>
+  <block id="65da019cf34a472cbf71786c4ca724c0" category="cell">LUN對應的最大數目</block>
+  <block id="10a7cdd970fe135cf4f7bb55c0e3b59f" category="cell">512</block>
+  <block id="bb1780abec6df99659ba08adda027cab" category="cell">*群組*</block>
+  <block id="f718499c1c8cef6730f9fd03c8125cab" category="cell">256</block>
+  <block id="28744ac550329e87641062231651a872" category="cell">*啟動器*</block>
+  <block id="dec03d5b1ceadd3a6f07097ef203fcdb" category="cell">每個igroup的最大值</block>
+  <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128/128</block>
+  <block id="50f3dc313c9f274380529358d5ea6650" category="cell">* iSCSI工作階段*</block>
+  <block id="d454388b41e56cfc66661cf1c85b8be8" category="cell">*生命*</block>
+  <block id="107778c598e69e673409276fc9a0543d" category="cell">每個連接埠的上限</block>
+  <block id="6364d3f0f495b6ab9dcf8d3b5c6e0b01" category="cell">32</block>
+  <block id="aa894911c7a20e27572cf7a8c1e15231" category="cell">每個連接埠集的上限</block>
+  <block id="7c8102fb403c417ae4b6e28c0e3352ba" category="cell">* PortSets*</block>
+  <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">在Google Cloud中、由於儲存組態限制、可提供可靠的作業。Cloud Volumes ONTAP為獲得最佳效能、請勿將系統設定為最大值。</block>
+  <block id="c73908091fadeb9dec16abab42821644" category="doc">Google Cloud的儲存限制</block>
+  <block id="bd1aae9c9a2ad10315cc633ab8b20aea" category="paragraph">對於Premium和BYOL授權、磁碟限制會讓您無法單獨使用磁碟、達到368TB容量限制。容量上限可達368TB<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。如需詳細資料、請參閱下列磁碟限制。</block>
+  <block id="5f807342ab46838a576d3111827add1c" category="cell">2 TB（Explore不支援資料分層）</block>
+  <block id="1191f788083da9194f8eef9400d10898" category="cell">10 TB</block>
+  <block id="86eaddcad9cef8a014b014a3ad2afb9c" category="cell">3668 TB</block>
+  <block id="38797647ee0806ca5a6dba902f03f6e0" category="cell">每個授權368TB</block>
+  <block id="466cd90b62b5da75ee4bd662add41e7f" category="section-title">磁碟和分層限制</block>
+  <block id="49e0d392d83f24aa1384f18b22975ef6" category="paragraph">下表顯示單一磁碟的最大系統容量、以及磁碟和冷資料分層至物件儲存設備的最大系統容量。磁碟限制僅適用於包含使用者資料的磁碟。限制不包括開機磁碟和根磁碟。</block>
+  <block id="46565acd92883af3343be8a2feed4b82" category="cell">每個系統的最大磁碟數</block>
+  <block id="c74d97b01eae257e44aa9d5bade97baf" category="cell">16</block>
+  <block id="4b4891ea5a4ccf6a32baf317c31a9391" category="cell">最大磁碟大小</block>
+  <block id="324f218b8144e744b54eb58e0bf14eea" category="cell">16 TB</block>
+  <block id="92d6dc05cca759fe0b05fc952ab8d146" category="cell">僅使用磁碟即可獲得最大系統容量</block>
+  <block id="c1edd650c09defc6ca8d0aaf67803ddc" category="cell">64 TB</block>
+  <block id="fb477a816dd39a57a35e342288ae601b" category="cell">利用磁碟和冷資料分層、將系統容量最大化至Google Cloud Storage儲存庫</block>
+  <block id="c75533298d4441dd8d38a818894ea65a" category="list-text">Premium：368TB</block>
+  <block id="20b1206a708114401bb4d64e30407ed2" category="list-text">BYOL：每個授權可達368TB</block>
+  <block id="c774172e35ab7294ce80989983a6d47e" category="paragraph">可將Google Cloud Platform磁碟分組為_aggregate。Cloud Volumes ONTAPAggregate可為磁碟區提供儲存設備。</block>
+  <block id="2fdbc868738cb6f9b3e2317808f3ed69" category="cell">64 TB原始容量^1^</block>
+  <block id="d21008939e91fc2c87c5bd73ce61f11d" category="cell">1-6 ^2^</block>
+  <block id="87e33aeb90b4a866393a43dd945eb88d" category="cell">最大Cloud Volumes ONTAP 數目</block>
+  <block id="d6cb2227648314141c252f8fc0ee513a" category="cell">一個資料服務SVM和一個目的地SVM、用於災難恢復。如果來源SVM發生中斷、您可以啟動目的地SVM進行資料存取。一部資料服務SVM橫跨Cloud Volumes ONTAP 整個整個系統、</block>
+  <block id="309524b9e1ef1d7d7d905c7cb1d358e9" category="cell">100 TB</block>
+  <block id="00341a78c2eaf7d804cfe027a2f67870" category="summary">AWS中的儲存組態設有限制、可提供可靠的作業。Cloud Volumes ONTAP為獲得最佳效能、請勿將系統設定為最大值。</block>
+  <block id="6870aed8e6dfc4f093d5b5c6f8a4d81c" category="doc">AWS的儲存限制</block>
+  <block id="073dcb6629ea09574fb688791b566258" category="paragraph">對於某些HA組態、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。如需詳細資料、請參閱下方的容量和磁碟限制。</block>
+  <block id="fc9a388cd18c69244f22554de6f0d544" category="section-title">對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？</block>
+  <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">不、這不需要。AWS HA配對中的資料會在節點之間同步鏡射、以便在發生故障時提供資料。例如、如果您在節點A上購買8個TiB磁碟、Cloud Manager也會在節點B上配置8個TiB磁碟、用於鏡射資料。雖然已配置16個TiB容量、但根據授權上限只計算8個TiB。</block>
+  <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">EC2執行個體的磁碟和分層限制</block>
+  <block id="64902ebf86d86e0c5dfcc29138584b73" category="paragraph">使用EBS磁碟區做為磁碟、磁碟大小上限為16 TiB。Cloud Volumes ONTAP以下各節顯示EC2執行個體類型的磁碟和分層限制、因為許多EC2執行個體類型具有不同的磁碟限制。單一節點系統與HA配對之間的磁碟限制也不同。</block>
+  <block id="5eb6e090da55ad28bf2f9c1286619ef2" category="paragraph">下列磁碟限制僅適用於包含使用者資料的磁碟。限制不包括開機磁碟和根磁碟。</block>
+  <block id="885555d1e0cd499c4325b375aae20709" category="paragraph">只有Premium和BYOL授權的執行個體會顯示磁碟限制、因為Explore或Standard授權無法達到磁碟限制。</block>
+  <block id="1e4f0991fe8c17eeb30a08a567b6faeb" category="cell">執行個體類型</block>
+  <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="1ae3bda6ec55236ef613c52c47316485" category="cell">352TiB</block>
+  <block id="55b122095d7b69d814bc6849b383e4df" category="cell">c5d.4xlarge</block>
+  <block id="7f9623c09f1541aea407df05491c9ac4" category="cell">c5d.9xlarge</block>
+  <block id="754828c9b88626872a73b65943afe305" category="cell">c5d.18xlarge</block>
+  <block id="3bf5113b1c70942177a6ee64a8200ded" category="cell">m5d.8xlarge</block>
+  <block id="779e6562c3768b528bec3198ecdd790e" category="cell">r5d.2xlarge</block>
+  <block id="6ebe799c380816a48bf991ae59543433" category="cell">544 TiB</block>
+  <block id="1f0e3dad99908345f7439f8ffabdffc4" category="cell">19</block>
+  <block id="4668344801574e5e337879aa8f85df78" category="cell">304. TiB</block>
+  <block id="35a779533962b549212e6b883b5793f7" category="cell">496 TiB</block>
+  <block id="b9d1a1e4bd5440efc61b41572ff402ed" category="paragraph">使用AWS磁碟區做為磁碟、並將其分組為_aggregate。Cloud Volumes ONTAPAggregate可為磁碟區提供儲存設備。</block>
+  <block id="84e0bd7c947290d306ef975cf8082911" category="cell">單一節點：與磁碟限制HA配對相同：節點上有18個^1^</block>
+  <block id="9825b8fbfebdae674007d54a87208654" category="cell">96 TiB原始容量^2^</block>
+  <block id="c2831ba563a5f21bb204f1c1e4a6ef78" category="cell">1-6 ^3^</block>
+  <block id="d1fbeaa75f4f2a9514bcd729f6b07b0d" category="list-text">無法在HA配對中的兩個節點上建立18個Aggregate、因為這樣做會超過資料磁碟限制。</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律聲明提供版權聲明、商標、專利等存取權限。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 標誌及 NetApp 商標頁面上列出的標章均為 NetApp 、 Inc. 的商標。其他公司與產品名稱可能為其各自所有者的商標。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">專利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">如需最新的 NetApp 擁有專利清單、請參閱：</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隱私權政策</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
+  <block id="2d68a24a147e43dffe439e943d48202f" category="inline-link-macro">關於此功能的注意事項Cloud Volumes ONTAP</block>
+  <block id="076ca59ec334421068574d66ed46fc2e" category="list-text"><block ref="076ca59ec334421068574d66ed46fc2e" category="inline-link-macro-rx"></block></block>
+  <block id="0c1d7dffcba488555d5eb39b8991e822" category="inline-link">關於此功能的注意事項ONTAP</block>
+  <block id="181f3da4bc521ff115f88eec16c06c47" category="list-text"><block ref="181f3da4bc521ff115f88eec16c06c47" category="inline-link-rx"></block></block>
+  <block id="7bb35241d1246d5dc87cb9e61c1efc05" category="summary">這些已知限制僅適用於Cloud Volumes ONTAP Microsoft Azure中的某些功能。</block>
+  <block id="2d9da48a9b4a4fd6966adc9c52393b79" category="doc">Azure的已知限制</block>
+  <block id="0328f3cd2aa15cf0cfa9a8cd39768eea" category="paragraph">下列已知限制僅適用於Cloud Volumes ONTAP Microsoft Azure中的功能。請務必同時檢閱 <block ref="3c5bba9e6532aaf7c9c167664226f819" category="inline-link-macro-rx"></block>。</block>
+  <block id="40f7aa196052206d81d0ee3a44db5c7c" category="section-title">不支援新部署</block>
+  <block id="da62d944ecf70740a29a77a77b99932e" category="paragraph">Azure不再支援全新部署Cloud Volumes ONTAP 的支援功能。您需要部署Cloud Volumes ONTAP 才能部署的產品。</block>
+  <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">HA 限制</block>
+  <block id="7e06c5d5d754bf97499c6ed081fc8e43" category="paragraph">下列限制會影響Cloud Volumes ONTAP Microsoft Azure中的功能組合：</block>
+  <block id="bd9f3210b7c4e1dfb162268596a29363" category="list-text">不支援 NFSv4 。支援 NFSv3 。</block>
+  <block id="74522068eb4d7b9d888846015e92c07a" category="list-text">某些地區不支援 HA 配對。</block>
+  <block id="1538d38eb23a96781db500ec7bd30195" category="inline-link">請參閱支援的 Azure 地區清單</block>
+  <block id="f5b8e6c4c4b082cf610f078e361a727f" category="paragraph"><block ref="1f129df010c594cb0d37bd30745a3820" category="inline-link-rx"></block>。</block>
+  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">CSP合作夥伴無法使用「隨用隨付」</block>
+  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">如果您是Microsoft Cloud Solution Provider（CSP）合作夥伴、則無法部署Cloud Volumes ONTAP SfExplore、Standard或Premium、因為CSP合作夥伴無法使用隨用付費訂閱。您必須購買授權並部署Cloud Volumes ONTAP BYOL。</block>
+  <block id="fef1eaa2dd33071624826d1db03e2f10" category="summary">可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP有兩種定價選項可供選擇、一次性付費、一次性自帶授權（BYOL）。</block>
+  <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="doc">Google Cloud支援的組態</block>
+  <block id="ea7866cebbcaa4ded45b93f65467fdee" category="paragraph">可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP提供兩種定價選項：隨用隨付、自帶授權（BYOL）。</block>
+  <block id="124b4b8c54c570a1ae4eb529271e8ce9" category="section-title">隨用隨付總覽</block>
+  <block id="81f3c286de00a7871e69b15c21bc0f04" category="list-text">提供下列三種不同的授權選項：Explore、Standard和Premium。Cloud Volumes ONTAP</block>
+  <block id="c8c6c3f36a8b4826074fdf1001e9ed6c" category="list-text">您Cloud Volumes ONTAP 可在Google Cloud部署的第一個版本為免費試用30天。</block>
+  <block id="8b8fb47062a4a8d65ab567874a89c9e2" category="list-text">不需支付每小時軟體費用、但Google Cloud基礎架構仍需支付費用（運算、儲存設備和網路）。</block>
+  <block id="8ddd262e43bfe23122d7a2f94ac0bcc4" category="inline-link">只要您訂閱</block>
+  <block id="fa63207f3d0d04071a0b442dda7f295e" category="list-text">當免費試用結束時、您將根據所選授權、每小時收取一次費用。<block ref="7b2a48e816cc3de5a5df78e388745df5" category="inline-link-rx"></block>。如果您尚未訂閱、系統會關閉。</block>
+  <block id="d1b41bae935c2bf4a024f87fd8d51066" category="list-text">目前不支援從PAYGO到BYOL的轉換。</block>
+  <block id="af4bff0fe0220cab6d9e429a98e85d86" category="list-text">提供基本技術支援、但您必須註冊並啟動與系統相關的NetApp序號。</block>
+  <block id="ba6c2f02fab845cdcf205c763a833a95" category="inline-link">在Cloud Manager中註冊隨用隨付系統</block>
+  <block id="43befa669bb3435dd7074ad9786f00ff" category="paragraph"><block ref="43befa669bb3435dd7074ad9786f00ff" category="inline-link-rx"></block></block>
+  <block id="18f78dd4b1fa4f25ebb2af7059d2d1e9" category="section-title">BYOL總覽</block>
+  <block id="7f76f820d237f30fbf118cdc0315682a" category="list-text">單一節點授權、含12個月、24個月及更多的定期訂購選項。</block>
+  <block id="abb25ffe4ec9feb0c1e66c45b57baf75" category="list-text">訂閱期間內包含支援服務。</block>
+  <block id="ffee9e1b62aeeb19e5ae01fec74d2478" category="list-text">您可以購買 Cloud Volumes ONTAP 多個適用於某個不含資料的 BYOL 系統授權、以配置超過 368TB 的容量。</block>
+  <block id="a48b0e873c27f7e0d976c0672548b5d4" category="paragraph">例如、您可能會購買兩份授權、以配置多達 736 TB 的容量來 Cloud Volumes ONTAP 供參考。您也可以購買四份授權、最多可取得1.4 PIB。</block>
+  <block id="00f7817c6866c601478b348ccbd76e41" category="paragraph">可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP</block>
+  <block id="e1e1effee5380369716ff955c2de6215" category="cell">支援的機器類型：^1^</block>
+  <block id="a260c7b81993f5c3a52b13e45b5a9d0a" category="cell">Custom-4-16384</block>
+  <block id="0cd9470795b4cb3063783195b32f04ac" category="cell">N1-標準8</block>
+  <block id="12f53e222fe53c58560223e660dcae57" category="cell">N1-標準32</block>
+  <block id="fd19b4f8d16fbd446f92c206592bcc85" category="cell">支援的磁碟類型^2^</block>
+  <block id="3a3ea5383480e2466943cf15294f23a6" category="cell">分區持續磁碟（SSD和標準）</block>
+  <block id="7d3f6ce6faf06e079d4a890b908c1d6e" category="cell">將冷資料分層至物件儲存設備</block>
+  <block id="4399cdb8f35c7f54994fbd6ad16ae51d" category="cell">2 TB</block>
+  <block id="164b7c0c1e8b58aede38583c90c24dc8" category="cell">368TB ^3^</block>
+  <block id="6f4ba43c1e563617b61089d7920f02fb" category="cell">每個授權容量368TB ^3^</block>
+  <block id="533aba66972b75bf0a272cff70a0da72" category="inline-link">Google Cloud文件：機器類型</block>
+  <block id="59ef5de4b82ed93557c876f1dfde976a" category="list-text">自訂機器類型有4個vCPU和16 GB記憶體。如需標準機器類型的詳細資訊、請參閱<block ref="72c995a0d75f0c9234d21b302484afa8" category="inline-link-rx"></block>。</block>
+  <block id="5063d3259058d90bbca06465957626d7" category="list-text">使用SSD時可啟用增強的寫入效能。</block>
+  <block id="af43b30ad14614d54641050981fca311" category="list-text">磁碟限制可防止您僅使用磁碟而達到368TB容量限制。容量上限可達368TB<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。</block>
+  <block id="f30cabe0a77d16d16cf1ef723d8eb186" category="inline-link-macro">深入瞭解Google Cloud的磁碟限制</block>
+  <block id="a93742b808592a2ce1b1926f98f391eb" category="paragraph"><block ref="46bbc0e4d7a811f26e46cbb2c2ad7173" category="inline-link-macro-rx"></block>。</block>
+  <block id="7093754c2bc2f151c7deef337385971a" category="list-text">如需Google Cloud Platform區域支援、請參閱<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
+  <block id="d29bff99e1f1d5529824e9017672d630" category="paragraph">在Google Cloud中、Aggregate最多可包含6個相同類型和大小的磁碟。支援下列磁碟大小：</block>
+  <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="list-text">100 GB</block>
+  <block id="47a5e6e39f64ff5d5dfb25da1aa3f3f2" category="list-text">500 GB</block>
+  <block id="70f79b00cb7649d94d473895d6c540d2" category="list-text">1 TB</block>
+  <block id="dbf13ee746bf3321dc6f92ccf385fa75" category="list-text">4 TB</block>
+  <block id="0706c165b0123479cffaac9b374484f0" category="list-text">8 TB</block>
+  <block id="641cb6ea406fcea2f5cb83d5bff6a2cf" category="summary">包含多項新功能與增強功能。Cloud Volumes ONTAP</block>
+  <block id="8c516265e5114ab1d7cdb12e4ef8f7be" category="doc">更新功能Cloud Volumes ONTAP</block>
+  <block id="f9d74313da16b2bb412c1d7c5efd0534" category="inline-link">Cloud Manager版本資訊</block>
+  <block id="62703524dbb4d20326585184b2149d4d" category="paragraph">最新版Cloud Manager也會提供其他功能與增強功能。請參閱<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 以取得詳細資料。</block>
+  <block id="2ed207d0ccec3d8be6a97fa4e5cbe8cf" category="section-title">9.6 P8（2020年6月2日）</block>
+  <block id="a5757ef07045a814bda504c5b48177c6" category="inline-link">檢視P8修補程式中修正的錯誤清單</block>
+  <block id="743c27b399481dcab7ab9e4537f7b730" category="paragraph">9.6 P8 for Cloud Volumes ONTAP NetApp的修補程式版本現在可透過Cloud Manager 3.8及更新版本取得。Cloud Manager會提示您將現有系統升級至此修補程式版本。<block ref="27ed2f4c2c7cbda227c565c50709952b" category="inline-link-rx"></block> （需要NetApp支援網站登入）。</block>
+  <block id="e3785b2dc7405274af7674cbf658ddc9" category="section-title">9.6 P7（2020年4月8日）</block>
+  <block id="7fa6a95154192207488dcc8bf13f9366" category="inline-link">檢視P7修補程式中修正的錯誤清單</block>
+  <block id="754c5ad9f75dd8cca29f53dffad850d8" category="paragraph">適用於VMware的9.6 P7修補程式版本Cloud Volumes ONTAP 現已透過Cloud Manager 3.8及更新版本提供。Cloud Manager會提示您將現有系統升級至此修補程式版本。<block ref="5b5f825c117e2cd734d2f00973daf6b1" category="inline-link-rx"></block> （需要NetApp支援網站登入）。</block>
+  <block id="aba878ef564107fc2b3279e92edbdd67" category="section-title">9.6 P6（2020年3月6日）</block>
+  <block id="4d90d21642c7222312363da000d7409f" category="inline-link">檢視在p6修補程式中修正的錯誤清單</block>
+  <block id="fc5493d5f5dbf7fa0302c9f95a86b43a" category="paragraph">9.6 P6的更新版本Cloud Volumes ONTAP 適用於整個過程、現在可透過Cloud Manager 3.8及更新版本取得。Cloud Manager會提示您將現有系統升級至此修補程式版本。<block ref="63e1eb50a385c77a69456b802be44d33" category="inline-link-rx"></block> （需要NetApp支援網站登入）。</block>
+  <block id="2125bceb2e0556bc06683c2940d933b7" category="section-title">AWS更新（2020年2月16日）</block>
+  <block id="9757a144e6a3956e9ee10843d960c015" category="paragraph">我們已推出新EC2執行個體的支援、以及支援的資料磁碟數量的變更。</block>
+  <block id="5627db075d2fbb217c3541ee12c9bf79" category="section-title">支援新執行個體</block>
+  <block id="1262cbe5988bce9ddc648ddb16b2636d" category="paragraph">使用Premium或BYOL授權時、目前支援幾種新型EC2執行個體類型Cloud Volumes ONTAP 的功能。</block>
+  <block id="49528ea65a365d8dc0f923d95151fe53" category="list-text">c5d.18xlarge、^1、2^</block>
+  <block id="7323a9688dc50d251d095d24857ab5aa" category="list-text">m5d.8xlarge、^1、2^</block>
+  <block id="54e92fde42179ca33e3ab25b036eee3b" category="paragraph">^1^這些執行個體類型包括本機NVMe儲存設備、Cloud Volumes ONTAP 此儲存設備用作_Flash Cache。<block ref="11a0a91823c32739dc802a8a06ed9368" category="inline-link-rx"></block>。</block>
+  <block id="58f5bca7ebf9364add8b8aa49376d27a" category="paragraph">9.6 P3及更新版本支援這些執行個體類型。</block>
+  <block id="e40db7e519ec8133d3d5ec2b6018eb7d" category="inline-link">深入瞭解這些EC2執行個體類型</block>
+  <block id="14c41dc08d5ec9262ecf13e1e578aa8d" category="paragraph"><block ref="9c041fd599501fd190b6b179970667cf" category="inline-link-rx"></block>。</block>
+  <block id="7e8ff32d6e9b1f8a1354e7d3081d8704" category="inline-link-macro">深入瞭解AWS支援的9.6組態</block>
+  <block id="6cad3797b2ba2172a8d9a9ba48b8302e" category="paragraph"><block ref="e858b1b47394fb49d8efb47ce41dd322" category="inline-link-macro-rx"></block>。</block>
+  <block id="54b686412a6f79240332197898e747ed" category="section-title">支援的資料磁碟</block>
+  <block id="c5e146213b590818d79cf4f701351824" category="paragraph">現在、對於c5、m5和R5執行個體、可減少一個資料磁碟。對於單一節點系統、支援22個資料磁碟。對於HA配對、每個節點支援19個資料磁碟。</block>
+  <block id="317ebfb69e398e9505a78d71bc65a5bc" category="inline-link-macro">深入瞭解AWS的儲存限制</block>
+  <block id="0f9c16f493be9e5311b40814bdc3e59c" category="paragraph"><block ref="8448f28c7d7fc3844972f38e8de744d6" category="inline-link-macro-rx"></block>。</block>
+  <block id="9e10b340501329002da6a645d2f9db13" category="section-title">支援Azure中的DS15_v2（2020年2月12日）</block>
+  <block id="a2450b180193f893f99cdc67637c6b5d" category="paragraph">目前、無論是單一節點系統或HA配對、Azure中的DS15_v2虛擬機器類型都支援此功能。Cloud Volumes ONTAP</block>
+  <block id="ac85befffffdcf36a090968f18c6e6c8" category="inline-link">深入瞭解DSv2系列</block>
+  <block id="2c87825d46690ccd9e87a79ae46fe49e" category="paragraph"><block ref="4def9f103b0c6aa1456860dd78f29a8d" category="inline-link-rx"></block>。</block>
+  <block id="463bc98ac3aed522451264709035b589" category="inline-link-macro">深入瞭解Azure支援的9.6組態</block>
+  <block id="b6646645cdfd3d2fc90c0da3362d25ae" category="paragraph"><block ref="75b0e9f55c50f34b27e06ef8feb6ef2f" category="inline-link-macro-rx"></block>。</block>
+  <block id="e5485c82dba10d255c6b9c7499fac621" category="section-title">9.6 P5（2019年12月26日）</block>
+  <block id="e890150484086859b9a5078abe9c6f20" category="inline-link">檢視在P5修補程式中修正的錯誤清單</block>
+  <block id="85990fe2e341c40673e3204c380915cc" category="paragraph">9.6 FP5 for Cloud Volumes ONTAP NetApp的修補程式版本現已透過Cloud Manager推出。Cloud Manager會提示您將現有系統升級至此修補程式版本。<block ref="3ae71b009d124b070d9f021141da4c97" category="inline-link-rx"></block> （需要NetApp支援網站登入）。</block>
+  <block id="b2cd4ebdae697d4269a4be10c62840f0" category="section-title">9.6 P4（2019年11月14日）</block>
+  <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link">檢視P4修補程式中修正的錯誤清單</block>
+  <block id="d111803a41bb2d9da2f1582f55eadfa1" category="paragraph">9.6 P4 for Cloud Volumes ONTAP NetApp的修補程式版本現在可透過Cloud Manager取得。Cloud Manager會提示您將現有系統升級至此修補程式版本。<block ref="37a75dd88024530b8e69a46bfa706a36" category="inline-link-rx"></block> （需要NetApp支援網站登入）。</block>
+  <block id="deb0bc93ac47ab816b8a5ed05ae9dabb" category="section-title">9.6 P3（2019年10月23日）</block>
+  <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link">檢視P3修補程式中修正的錯誤清單</block>
+  <block id="424696a4fb90ca58f58f29f4a9830ead" category="paragraph">9.6 P3版的Cloud Volumes ONTAP 更新版for the NetApp現在可透過Cloud Manager取得。Cloud Manager會提示您將現有系統升級至此修補程式版本。<block ref="9750163a1a803720e88b672e96813777" category="inline-link-rx"></block> （需要NetApp支援網站登入）。</block>
+  <block id="f55de6d97a3eebd715c6577313dd9324" category="paragraph">除了錯誤修復之外、此版本也能啟用下列功能：</block>
+  <block id="b4a636c78d3f136bc9f29ec03879e547" category="list-text">支援AWS中的c5.18xlarge執行個體類型。</block>
+  <block id="896286304a807515c601a4089c136592" category="list-text">Azure中單一節點系統的最大集合體大小增加：目前支援352TB原始容量。</block>
+  <block id="c58e73ed16ce57af9aeff461e23ebc2b" category="paragraph">單一節點系統的最大Aggregate大小先前為200 TB。</block>
+  <block id="564c76cca9e264fa5fc40667ae5eaf30" category="section-title">Google Cloud Marketplace的隨用隨付訂閱（2019年10月6日）</block>
+  <block id="dff49d2d58662ab437d0aa8c7e93729f" category="paragraph">您現在Cloud Volumes ONTAP 可以在Cloud Volumes ONTAP Google Cloud Platform Marketplace訂閱《關於解決方案的資訊》、一次購買即可獲得「解決方案的資訊」。</block>
+  <block id="1ded5b1a865dfcfbb56d03ccf3160175" category="inline-link">Google Cloud Platform Marketplace：Cloud Manager for Cloud Volumes ONTAP 架構</block>
+  <block id="dec9968658f6cfe9a264447901a2d4e8" category="paragraph"><block ref="03a527900524b7cc47f5cc5a89e1c2a4" category="inline-link-rx"></block></block>
+  <block id="c22d58d132fde08e6cb3ce8682ef0c27" category="section-title">Google Cloud中的通用功能（2019年9月3日）Cloud Volumes ONTAP</block>
+  <block id="b5c4261984e1b609960996cc7f8db6f1" category="paragraph">現在、當您自帶授權（BYOL）時、Google Cloud Platform（Google Cloud）通常會提供此功能。Cloud Volumes ONTAP您也可以參加隨用隨付促銷活動。促銷活動提供無限數量系統的免費授權、將於2019年9月底到期。</block>
+  <block id="aceb7b5c9dcaec5bdfbb67154ac957b7" category="inline-link">瞭解如何開始使用Google Cloud</block>
+  <block id="c7713a8dd332a241f8ba976a2dfd415a" category="list-text"><block ref="c7713a8dd332a241f8ba976a2dfd415a" category="inline-link-rx"></block></block>
+  <block id="4f43bc0d7d3c4f71a88bde15ba890d61" category="inline-link-macro">檢視支援的組態</block>
+  <block id="9d259e09a2069492d05d38d036dc343f" category="list-text"><block ref="9d259e09a2069492d05d38d036dc343f" category="inline-link-macro-rx"></block></block>
+  <block id="093b906e941c2ed3dbe4cd53fa2b968a" category="section-title">9.6 P2（2019年8月29日）</block>
+  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">檢視P2修補程式中修正的錯誤清單</block>
+  <block id="77effd38b6955b529d5d25e66f688042" category="paragraph">9.6 P2版的Cloud Volumes ONTAP 更新版適用於整個過程、現在可透過Cloud Manager取得。Cloud Manager會提示您將現有的9.5和9.6系統升級至此修補程式版本。<block ref="1a86bf0bfcb26e64dd76e07526f69bb1" category="inline-link-rx"></block> （需要NetApp支援網站登入）。</block>
+  <block id="b89daa66794b07f5fbcaf49771517ae1" category="section-title">9.6 GA（2019年7月15日）</block>
+  <block id="f59c733e656c9f76962e28166d7967fc" category="paragraph">目前已推出《一般供應（GA）Cloud Volumes ONTAP 》版本的《The General Availability》（更新版本）。GA版本包含錯誤修正。Cloud Manager會提示您將現有系統升級至此版本。</block>
+  <block id="9b67d2159e8d7509da91725edd13b88e" category="admonition">在Google Cloud Platform中、可將其保留在私有預覽中。Cloud Volumes ONTAP</block>
+  <block id="97e5d33555677cb97e1cefb66e8ceff0" category="section-title">9.6 RC1（2019年6月16日）</block>
+  <block id="3e9a0267ca4aef1630939619edaa4068" category="paragraph">適用於AWS、Azure及Google Cloud Platform的RC9.6 RC1。Cloud Volumes ONTAP此版本包含下列功能。</block>
+  <block id="0304ba59d3502e9f163cd93e9dd20d73" category="list-text"><block ref="4422dd21ff9d00d059f6b08233e90697" category="inline-xref-macro-rx"></block></block>
+  <block id="a45661ca0fa00118274878e5d60af96d" category="list-text"><block ref="db3eb175d0a8a4309ec73b79a4676f9a" category="inline-xref-macro-rx"></block></block>
+  <block id="db50d2d12406fdf3bfdd00210aaa9169" category="list-text"><block ref="13b4286b6641dec41b5f3ad40f66ac0f" category="inline-xref-macro-rx"></block></block>
+  <block id="d6625c05ecd4a20d26d433b9cbafdc36" category="list-text"><block ref="8b55db43d9532295c1838a3546031f07" category="inline-xref-macro-rx"></block></block>
+  <block id="fb70271c0856f8a483dd456d544e77fc" category="section-title">Google Cloud Volumes ONTAP Cloud Platform中的私有版功能預覽</block>
+  <block id="341492551b42bc9c3a4842a69465d289" category="paragraph">Google Cloud Platform提供個人版Cloud Volumes ONTAP 的功能預覽。與其他雲端供應商類似、Cloud Volumes ONTAP 適用於Google Cloud Platform的解決方案可協助您降低成本、改善效能及提高可用度。</block>
+  <block id="0574046b4fe6ff745f0be93d6b6fd869" category="paragraph">可在Google Cloud中以單一節點系統的形式取得、並支援資料分層至物件儲存設備。Cloud Volumes ONTAP</block>
+  <block id="f64e9e9b5d4776f23e13bbfa89a3693e" category="paragraph">若要加入私人預覽、請傳送要求至ng-Cloud-Volume-ONTAP-preview@netapp.com。</block>
+  <block id="15b22b58ab99e57c3a666fd8ccafd60c" category="section-title">Azure中的HA配對資料分層</block>
+  <block id="781a2603f60f2e06f4bd34fe37dcceb2" category="paragraph">Microsoft Cloud Volumes ONTAP Azure中的資料分層功能現在支援使用不含更新功能的成對功能。資料分層功能可將非作用中資料自動分層至低成本的Blob儲存設備。</block>
+  <block id="2f455eadbff0e0cda8ff0cc2d5f1656a" category="inline-link">瞭解如何在Cloud Manager中設定資料分層</block>
+  <block id="cbd1f918660d8498d9e36cea1a052ceb" category="paragraph"><block ref="30318058820d18ebea3b434a4bb49cb6" category="inline-link-rx"></block>。</block>
+  <block id="1b6c4eacbc8a0440eaac705ef435daca" category="section-title">支援FlexCache 支援功能</block>
+  <block id="2ddb8d07e9f5af9d9a76333b9ef2a7cb" category="paragraph">流通量是儲存磁碟區、可快取來源（或來源）磁碟區的 NFS 讀取資料。 FlexCache後續讀取快取資料會加快該資料的存取速度。</block>
+  <block id="90c624683582774042156c98858d14dc" category="paragraph">您可以使用 FlexCache 功能區來加速資料存取、或卸載大量存取磁碟區的流量。由於資料無需存取來源磁碟區、因此能夠直接提供服務、因此在用戶端需要重複存取相同資料時、支援使用者更能提升效能。 FlexCache適用於讀取密集的系統工作負載的資料量。 FlexCache</block>
+  <block id="f877a470e7729fd30b8ad853d0ffdf93" category="paragraph">Cloud Manager FlexCache 目前並未提供對各個版本的管理、但您可以使用 ONTAP CLI 或 ONTAP 功能完善的系統管理程式來建立及管理 FlexCache 各個版本：</block>
+  <block id="29e15f4a6477b08e72892d33f28001ce" category="inline-link">《資料存取能力快速指南》的《支援資料量》（英文） FlexCache</block>
+  <block id="f2a7a46cc845b377d163ce816c723b41" category="list-text"><block ref="f2a7a46cc845b377d163ce816c723b41" category="inline-link-rx"></block></block>
+  <block id="bdfeff9b431b433fc22dbf6b9baa1dfc" category="inline-link">在 FlexCache System Manager 中建立功能區</block>
+  <block id="7eeac5ac06af86bf7a05d8897d8f378c" category="list-text"><block ref="7eeac5ac06af86bf7a05d8897d8f378c" category="inline-link-rx"></block></block>
+  <block id="0566b6e2df4ff947b8313e081a6e1f8f" category="paragraph">從 3.7.2 版開始、 Cloud Manager 會為 FlexCache 所有的 Cloud Volumes ONTAP 全新推出的功能介紹系統產生一套功能不全的使用許可證。授權包含500 GiB使用限制。</block>
+  <block id="fafa19aef587adc21c22ee834ba83a2d" category="section-title">其他ONTAP 功能變更</block>
+  <block id="bf4769e5b1d89444d8869e060f95ceb5" category="paragraph">NetApp 9.6包含其他非功能使用者可能感興趣的變更：ONTAP Cloud Volumes ONTAP</block>
+  <block id="d85686343a39b7333e7dbb94c23058dc" category="list-text">SnapMirror複寫現在支援傳輸中通訊的TLS 1.2加密</block>
+  <block id="52641651e33992c8ba04bd3bf9dce60d" category="list-text">資料分層FabricPool （物件）增強功能包括：</block>
+  <block id="e18fa056e9c8757dc262a97be1b94074" category="list-text">不需重新分層冷資料、即可支援Volume搬移</block>
+  <block id="a65b108e24d6077f3b9e9c12bf8e177c" category="list-text">SVM災難恢復支援</block>
+  <block id="efe451bd1c5b374a05e7d5178bb06987" category="inline-link">發行說明ONTAP</block>
+  <block id="7929b6c38226307566d4617a22f74a74" category="paragraph">如需9.6版的詳細資訊、請參閱<block ref="6e7f74aa9001f0524a965144f528bbc2" category="inline-link-rx"></block>。</block>
+  <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">升級附註</block>
+  <block id="60390541f94082520ecc256f9a7ddad4" category="list-text">您可以從Cloud Volumes ONTAP 9.5版升級至S69.6版。</block>
+  <block id="9f0f02784feedfa2549a9e3a51cfa315" category="list-text">單一節點系統的升級可讓系統離線長達25分鐘、在此期間I/O會中斷。</block>
+  <block id="00795e3f043d0bab791590ffc0257204" category="list-text">升級 HA 配對不中斷營運、而且 I/O 不中斷。在此不中斷營運的升級程序中、會同時升級每個節點、以繼續為用戶端提供 I/O 服務。</block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
+  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">版本資訊首頁</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
+  <block id="1f0b82560627b660c6c6958a1df834b8" category="sidebar">支援的組態</block>
+  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
+  <block id="3a580f142203677f1f0bc30898f63f53" category="sidebar">Azure</block>
+  <block id="56ef2682280ac110060b881925a87b80" category="sidebar">Google Cloud</block>
+  <block id="150a34e7bbdf7765066eae5fadb9f919" category="sidebar">儲存限制</block>
+  <block id="482723983a4f2af954e36ff41e567451" category="sidebar">已知限制</block>
+  <block id="75de5084889080c34d338d79014b90d7" category="sidebar">常見限制</block>
+  <block id="5313a9ac102424f63dd4d76f5280130e" category="sidebar">AWS的限制</block>
+  <block id="1fff298355326f8c77bd77059a41c1a2" category="sidebar">Azure的限制</block>
+  <block id="9a3a0c4b2afbb088e029484d4b34ba8b" category="sidebar">Google Cloud的限制</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
+  <block id="6beccc67ff905f7da0b29dece26b0485" category="sidebar">Amazon Web Services</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="sidebar">限制</block>
+  <block id="1668ca1bd914c1d847f23b491319ac91" category="sidebar">Microsoft Azure</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
+  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">解決方案ONTAP</block>
+</blocks>

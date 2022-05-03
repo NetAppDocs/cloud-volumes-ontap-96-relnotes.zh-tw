@@ -1,0 +1,174 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-azure.html 
+keywords: vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, disks, sizes 
+summary: Azure提供PAYGO和BYOL組態的適用範本。Cloud Volumes ONTAP若為PAYGO、您可以選擇Explore、Standard或Premium。 
+---
+= Azure支援的組態
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Azure提供下列兩種定價選項：隨用隨付及自帶授權（BYOL）Cloud Volumes ONTAP 。對於隨用隨付的方案、您可以從三種組態中選擇：Explore、Standard或Premium。
+
+
+
+== 依授權支援的組態
+
+Azure中提供的支援可作為單一節點系統、以及高可用度（HA）節點配對、以提供容錯能力和不中斷營運。Cloud Volumes ONTAP
+
+不支援將單一節點系統升級為HA配對。如果您想在單一節點系統和HA配對之間切換、則需要部署新系統、並將資料從現有系統複寫到新系統。
+
+
+
+=== 單一節點系統
+
+當您在Cloud Volumes ONTAP Azure中部署以單節點系統的方式部署時、可以從下列組態中進行選擇：
+
+[cols="h,d,d,d,d"]
+|===
+|  | 瀏覽 | 標準 | 優質 | BYOL 
+
+
+| 支援的虛擬機器類型 | DS3_v2  a| 
+* DS4_v2
+* DS13_v2
+
+ a| 
+* DS5_v2
+* DS14_v2
+* DS15_v2
+
+ a| 
+* DS3_v2
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+
+
+
+
+| 支援的磁碟類型^1^ 4+| 標準HDD託管磁碟、標準SSD託管磁碟和優質SSD託管磁碟 
+
+
+| 冷資料分層至Blob儲存設備 | 不支援 3+| 支援 
+
+
+| 最大系統容量（磁碟+物件儲存） | 2 TiB | 10 TiB | 368TiB | 每個授權368TiB 
+|===
+附註：
+
+. 使用SSD時會啟用增強寫入效能、但使用DS3_v2虛擬機器類型時則不會啟用。
+. 如需Azure地區支援、請參閱 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]。
+
+
+
+
+=== HA 配對
+
+在Cloud Volumes ONTAP Azure中部署以HA配對形式部署的時、您可以從下列組態中進行選擇：
+
+[cols="h,d,d,d,d"]
+|===
+|  | 瀏覽 | 標準 | 優質 | BYOL 
+
+
+| 支援的虛擬機器類型 | 不支援  a| 
+* DS4_v2
+* DS13_v2
+
+ a| 
+* DS5_v2
+* DS14_v2
+* DS15_v2
+
+ a| 
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+
+
+
+
+| 支援的磁碟類型 | 不支援 3+| 優質網頁 
+
+
+| 冷資料分層至Blob儲存設備^2^ | 不支援 3+| 支援 
+
+
+| 最大系統容量（磁碟+物件儲存） | 不支援 | 10 TiB | 368TiB | 每個授權368TiB 
+|===
+附註：
+
+. 如需Azure地區支援、請參閱 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]。
+
+
+
+
+== 支援的磁碟大小
+
+在Azure中、Aggregate最多可包含12個相同類型和大小的磁碟。
+
+
+
+=== 單一節點系統
+
+單一節點系統使用Azure託管磁碟。支援下列磁碟大小：
+
+[cols="3*"]
+|===
+| 優質SSD | 標準SSD | 標準HDD 
+
+
+ a| 
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
+* 16 TiB
+* 32 TiB
+
+ a| 
+* 100 GiB
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
+* 16 TiB
+* 32 TiB
+
+ a| 
+* 100 GiB
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
+* 16 TiB
+* 32 TiB
+
+
+|===
+
+
+=== HA 配對
+
+HA配對使用優質網頁瀏覽器。支援下列磁碟大小：
+
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
+

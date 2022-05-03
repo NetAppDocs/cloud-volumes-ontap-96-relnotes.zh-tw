@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations-azure.html 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3 
+summary: 這些已知限制僅適用於Cloud Volumes ONTAP Microsoft Azure中的某些功能。 
+---
+= Azure的已知限制
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+下列已知限制僅適用於Cloud Volumes ONTAP Microsoft Azure中的功能。請務必同時檢閱 link:reference-limitations.html["所有雲端供應商的限制"]。
+
+
+
+== 不支援新部署
+
+Azure不再支援全新部署Cloud Volumes ONTAP 的支援功能。您需要部署Cloud Volumes ONTAP 才能部署的產品。
+
+
+
+== HA 限制
+
+下列限制會影響Cloud Volumes ONTAP Microsoft Azure中的功能組合：
+
+* 不支援 NFSv4 。支援 NFSv3 。
+* 某些地區不支援 HA 配對。
++
+https://cloud.netapp.com/cloud-volumes-global-regions["請參閱支援的 Azure 地區清單"^]。
+
+
+
+
+
+== CSP合作夥伴無法使用「隨用隨付」
+
+如果您是Microsoft Cloud Solution Provider（CSP）合作夥伴、則無法部署Cloud Volumes ONTAP SfExplore、Standard或Premium、因為CSP合作夥伴無法使用隨用付費訂閱。您必須購買授權並部署Cloud Volumes ONTAP BYOL。
