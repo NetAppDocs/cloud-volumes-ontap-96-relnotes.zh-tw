@@ -87,19 +87,19 @@ NOTE: 對於某些VM類型、您需要數個BYOL授權、才能達到下列系�
 | DS3_v2 | 15 | 368TiB | 368TiB | 480 TiB | 每個授權使用368TiB 
 
 
-| DS4_v2 | 31 | 368TiB | 368TiB | 992 TiB | 每個授權使用368TiB 
+| DS4_v2 | 31 | 368TiB | 368TiB | 896 TiB | 每個授權使用368TiB 
 
 
-| DS5_v2 | 63. | 368TiB | 368TiB | 2 PIB | 每個授權使用368TiB 
+| DS5_v2 | 63. | 368TiB | 368TiB | 896 TiB | 每個授權使用368TiB 
 
 
-| DS13_v2 | 31 | 368TiB | 368TiB | 992 TiB | 每個授權使用368TiB 
+| DS13_v2 | 31 | 368TiB | 368TiB | 896 TiB | 每個授權使用368TiB 
 
 
-| DS14_v2 | 63. | 368TiB | 368TiB | 2 PIB | 每個授權使用368TiB 
+| DS14_v2 | 63. | 368TiB | 368TiB | 896 TiB | 每個授權使用368TiB 
 
 
-| DS15_v2 | 63. | 368TiB | 368TiB | 2 PIB | 每個授權使用368TiB 
+| DS15_v2 | 63. | 368TiB | 368TiB | 896 TiB | 每個授權使用368TiB 
 |===
 
 
