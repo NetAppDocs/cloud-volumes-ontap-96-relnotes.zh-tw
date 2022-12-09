@@ -145,10 +145,10 @@ NOTE: 在Google Cloud Platform中、可將其保留在私有預覽中。Cloud Vo
 
 適用於AWS、Azure及Google Cloud Platform的RC9.6 RC1。Cloud Volumes ONTAP此版本包含下列功能。
 
-*  preview of Cloud Volumes ONTAP in Google Cloud Platform
-*  tiering with HA pairs in Azure
-*  for FlexCache volumes
-*  ONTAP changes
+* <<Google Cloud Volumes ONTAP Cloud Platform中的私有版功能預覽>>
+* <<Azure中的HA配對資料分層>>
+* <<支援FlexCache 支援功能>>
+* <<其他ONTAP 功能變更>>
 
 
 

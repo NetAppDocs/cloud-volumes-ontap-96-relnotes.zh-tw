@@ -332,16 +332,12 @@
   <block id="7bb35241d1246d5dc87cb9e61c1efc05" category="summary">這些已知限制僅適用於Cloud Volumes ONTAP Microsoft Azure中的某些功能。</block>
   <block id="2d9da48a9b4a4fd6966adc9c52393b79" category="doc">Azure的已知限制</block>
   <block id="0328f3cd2aa15cf0cfa9a8cd39768eea" category="paragraph">下列已知限制僅適用於Cloud Volumes ONTAP Microsoft Azure中的功能。請務必同時檢閱 <block ref="3c5bba9e6532aaf7c9c167664226f819" category="inline-link-macro-rx"></block>。</block>
-  <block id="40f7aa196052206d81d0ee3a44db5c7c" category="section-title">不支援新部署</block>
   <block id="da62d944ecf70740a29a77a77b99932e" category="paragraph">Azure不再支援全新部署Cloud Volumes ONTAP 的支援功能。您需要部署Cloud Volumes ONTAP 才能部署的產品。</block>
   <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">HA 限制</block>
   <block id="7e06c5d5d754bf97499c6ed081fc8e43" category="paragraph">下列限制會影響Cloud Volumes ONTAP Microsoft Azure中的功能組合：</block>
   <block id="bd9f3210b7c4e1dfb162268596a29363" category="list-text">不支援 NFSv4 。支援 NFSv3 。</block>
   <block id="74522068eb4d7b9d888846015e92c07a" category="list-text">某些地區不支援 HA 配對。</block>
   <block id="1538d38eb23a96781db500ec7bd30195" category="inline-link">請參閱支援的 Azure 地區清單</block>
-  <block id="f5b8e6c4c4b082cf610f078e361a727f" category="paragraph"><block ref="1f129df010c594cb0d37bd30745a3820" category="inline-link-rx"></block>。</block>
-  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">CSP合作夥伴無法使用「隨用隨付」</block>
-  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">如果您是Microsoft Cloud Solution Provider（CSP）合作夥伴、則無法部署Cloud Volumes ONTAP SfExplore、Standard或Premium、因為CSP合作夥伴無法使用隨用付費訂閱。您必須購買授權並部署Cloud Volumes ONTAP BYOL。</block>
   <block id="fef1eaa2dd33071624826d1db03e2f10" category="summary">可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP有兩種定價選項可供選擇、一次性付費、一次性自帶授權（BYOL）。</block>
   <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="doc">Google Cloud支援的組態</block>
   <block id="ea7866cebbcaa4ded45b93f65467fdee" category="paragraph">可在Google Cloud Platform中以單一節點系統的形式取得。Cloud Volumes ONTAP提供兩種定價選項：隨用隨付、自帶授權（BYOL）。</block>
@@ -507,4 +503,8 @@
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">解決方案ONTAP</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
+  <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">對於HA、每個節點或整個HA配對的授權容量限制是多少？</block>
+  <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？</block>
+  <block id="b7a391ba538fb8a6830548a168a702ed" category="section-title">不支援新部署</block>
+  <block id="1f129df010c594cb0d37bd30745a3820" category="paragraph"><block ref="1f129df010c594cb0d37bd30745a3820" category="inline-link-rx"></block></block>
 </blocks>
