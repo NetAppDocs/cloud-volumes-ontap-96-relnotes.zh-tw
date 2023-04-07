@@ -26,19 +26,6 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
-== 中國地區的支援
-
-支援中國地區的下列項目。Cloud Volumes ONTAP
-
-* 支援AWS中國地區的支援區域為支援區域9.6。Cloud Volumes ONTAP
-* 支援單一節點系統。
-* 支援直接向NetApp購買的授權。
-
-
-不支援所有其他位置、版本、組態和授權。
-
-
-
 == 軟體更新必須由Cloud Manager完成
 
 必須從 Cloud Manager 完成升級。 Cloud Volumes ONTAP您不應 Cloud Volumes ONTAP 使用 System Manager 或 CLI 來升級功能。這樣做可能會影響系統穩定性。
