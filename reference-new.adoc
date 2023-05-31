@@ -16,7 +16,7 @@ summary: 包含多項新功能與增強功能。Cloud Volumes ONTAP
 [role="lead"]
 包含多項新功能與增強功能。Cloud Volumes ONTAP
 
-最新版Cloud Manager也會提供其他功能與增強功能。請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager版本資訊"^] 以取得詳細資料。
+最新版Cloud Manager也會提供其他功能與增強功能。請參閱 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Manager版本資訊"^] 以取得詳細資料。
 
 
 
@@ -53,7 +53,7 @@ summary: 包含多項新功能與增強功能。Cloud Volumes ONTAP
 * m5d.8xlarge、^1、2^
 
 
-^1^這些執行個體類型包括本機NVMe儲存設備、Cloud Volumes ONTAP 此儲存設備用作_Flash Cache。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["深入瞭解"^]。
+^1^這些執行個體類型包括本機NVMe儲存設備、Cloud Volumes ONTAP 此儲存設備用作_Flash Cache。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["深入瞭解"^]。
 
 9.6 P3及更新版本支援這些執行個體類型。
 
@@ -120,7 +120,7 @@ https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-m
 
 現在、當您自帶授權（BYOL）時、Google Cloud Platform（Google Cloud）通常會提供此功能。Cloud Volumes ONTAP您也可以參加隨用隨付促銷活動。促銷活動提供無限數量系統的免費授權、將於2019年9月底到期。
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["瞭解如何開始使用Google Cloud"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-gcp.html["瞭解如何開始使用Google Cloud"^]
 * link:reference-configs-gcp.html["檢視支援的組態"]
 
 
@@ -167,7 +167,7 @@ Google Cloud Platform提供個人版Cloud Volumes ONTAP 的功能預覽。與其
 
 Microsoft Cloud Volumes ONTAP Azure中的資料分層功能現在支援使用不含更新功能的成對功能。資料分層功能可將非作用中資料自動分層至低成本的Blob儲存設備。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["瞭解如何在Cloud Manager中設定資料分層"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["瞭解如何在Cloud Manager中設定資料分層"^]。
 
 
 
