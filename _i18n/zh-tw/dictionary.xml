@@ -22,7 +22,6 @@
   <block id="cb272a6dc5e534974a2ae26644e5635f" category="list-text">如果您想要在Cloud Volumes ONTAP 任何AWS GovCloud（美國）區域中啟動執行個體、Cloud Manager必須部署在AWS GovCloud（美國）區域。</block>
   <block id="77cc64ce7fdafcda7deefa3aa250801c" category="list-text">當部署於AWS GovCloud（美國）區域時、Cloud Manager無法在ONTAP 適用於Microsoft Azure組態的NetApp私有儲存設備或適用於SoftLayer組態的NetApp私有儲存設備中探索到各種非功能叢集。</block>
   <block id="a9f27c00250c46c26cb8db62812585a9" category="summary">這些版本說明Cloud Volumes ONTAP 介紹有關功能、限制和已知問題的資訊。</block>
-  <block id="001a55affa5f48701656447cc466491a" category="doc">發行說明Cloud Volumes ONTAP</block>
   <block id="38c460995e0edbe604d8fe4c32af0cd1" category="summary">Azure提供PAYGO和BYOL組態的適用範本。Cloud Volumes ONTAP若為PAYGO、您可以選擇Explore、Standard或Premium。</block>
   <block id="e4b60b51b40a0907e38b3293d36780e6" category="doc">Azure支援的組態</block>
   <block id="d5b2af892d200485c2e56ace1a1f077a" category="paragraph">Azure提供下列兩種定價選項：隨用隨付及自帶授權（BYOL）Cloud Volumes ONTAP 。對於隨用隨付的方案、您可以從三種組態中選擇：Explore、Standard或Premium。</block>
@@ -458,7 +457,6 @@
   <block id="60390541f94082520ecc256f9a7ddad4" category="list-text">您可以從Cloud Volumes ONTAP 9.5版升級至S69.6版。</block>
   <block id="9f0f02784feedfa2549a9e3a51cfa315" category="list-text">單一節點系統的升級可讓系統離線長達25分鐘、在此期間I/O會中斷。</block>
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">升級 HA 配對不中斷營運、而且 I/O 不中斷。在此不中斷營運的升級程序中、會同時升級每個節點、以繼續為用戶端提供 I/O 服務。</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">版本資訊首頁</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="sidebar">支援的組態</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="sidebar">AWS</block>
@@ -478,8 +476,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">解決方案ONTAP</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">對於HA、每個節點或整個HA配對的授權容量限制是多少？</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？</block>
@@ -496,7 +492,6 @@
   <block id="f0b3ec3784c8134aa3d1b3f616747c1f" category="paragraph">^1^這些執行個體類型包括本機NVMe儲存設備、Cloud Volumes ONTAP 此儲存設備用作_Flash Cache。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
   <block id="f28445b786a8ee508a547eb98b06d004" category="list-text"><block ref="f28445b786a8ee508a547eb98b06d004" category="inline-link-rx"></block></block>
   <block id="7ae536183899b3255ea022e34c5f3b1f" category="paragraph"><block ref="2fbfe631d352cae0cc3edf98b3ab020c" category="inline-link-rx"></block>。</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文件</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -505,4 +500,7 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">使用 Azure VM 延伸功能的限制</block>
+  <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAP 不支援部署中的 Azure 虛擬機器（ VM ）延伸功能和 VM 應用程式。在 Azure 中使用 Cloud Volumes ONTAP 搭配 VM 延伸功能會導致作業延遲， NetApp 建議您避免這些延遲。</block>
+  <block id="415a4c0e58754d1017d75ef167c0e10e" category="sidebar">Cloud Volumes ONTAP 9.6 版本資訊</block>
 </blocks>
