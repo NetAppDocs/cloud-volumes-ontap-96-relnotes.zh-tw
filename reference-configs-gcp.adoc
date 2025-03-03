@@ -81,7 +81,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["
 +
 link:reference-limits-gcp.html["深入瞭解Google Cloud的磁碟限制"]。
 
-. 如需Google Cloud Platform區域支援、請參閱 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]。
+. 如需 Google Cloud Platform 地區支援、請參閱 https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]。
 
 
 

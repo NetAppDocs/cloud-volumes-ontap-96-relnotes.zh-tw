@@ -55,7 +55,6 @@
   <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">附註：</block>
   <block id="a63be6f12cd03be8e118239f1f944bda" category="list-text">使用SSD時會啟用增強寫入效能、但使用DS3_v2虛擬機器類型時則不會啟用。</block>
   <block id="a3f8304ab1695053d71855c60f8abf63" category="inline-link">Cloud Volumes全球區域</block>
-  <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">如需Azure地區支援、請參閱<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="b049fcbe8198301adc6bf87634a02845" category="section-title">HA 配對</block>
   <block id="a2f04bcb45cecb780dad3d2795f4e080" category="paragraph">在Cloud Volumes ONTAP Azure中部署以HA配對形式部署的時、您可以從下列組態中進行選擇：</block>
   <block id="3e7433721426ddc5bb6007a1f480b7e0" category="cell">支援的磁碟類型</block>
@@ -112,7 +111,6 @@
   <block id="3de497f7f0c3d4c077d3911a90241bdb" category="list-text">不支援GP3 SSD。</block>
   <block id="9cb3b0db1f5a7a0032a165789bcde1dd" category="inline-link-macro">儲存限制</block>
   <block id="ba23388576c937a1743b84554bd13c72" category="inline-link">將非作用中資料分層至物件儲存設備</block>
-  <block id="4375839c669e051e5f2a8de11ba0c5d0" category="list-text">如需AWS區域支援、請參閱<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="f1ef8a69abb63b240d611c09ea5ddde6" category="paragraph">在AWS中、Aggregate最多可包含6個相同類型和大小的磁碟。</block>
   <block id="eaa2d3a786327e0ea77b42c648bf6007" category="cell">通用SSD（gp2）</block>
   <block id="c50feb3c9ed89b38a1757f8a63ccd0a6" category="cell">已配置的IOPS SSD（IO1）</block>
@@ -355,7 +353,6 @@
   <block id="5063d3259058d90bbca06465957626d7" category="list-text">使用SSD時可啟用增強的寫入效能。</block>
   <block id="f30cabe0a77d16d16cf1ef723d8eb186" category="inline-link-macro">深入瞭解Google Cloud的磁碟限制</block>
   <block id="a93742b808592a2ce1b1926f98f391eb" category="paragraph"><block ref="46bbc0e4d7a811f26e46cbb2c2ad7173" category="inline-link-macro-rx"></block>。</block>
-  <block id="7093754c2bc2f151c7deef337385971a" category="list-text">如需Google Cloud Platform區域支援、請參閱<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="d29bff99e1f1d5529824e9017672d630" category="paragraph">在Google Cloud中、Aggregate最多可包含6個相同類型和大小的磁碟。支援下列磁碟大小：</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="list-text">100 GB</block>
   <block id="47a5e6e39f64ff5d5dfb25da1aa3f3f2" category="list-text">500 GB</block>
@@ -480,7 +477,6 @@
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">對於HA、每個節點或整個HA配對的授權容量限制是多少？</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？</block>
   <block id="b7a391ba538fb8a6830548a168a702ed" category="section-title">不支援新部署</block>
-  <block id="1f129df010c594cb0d37bd30745a3820" category="paragraph"><block ref="1f129df010c594cb0d37bd30745a3820" category="inline-link-rx"></block></block>
   <block id="919f52135f3da38305bc973583dd5fb5" category="list-text">對於某些HA組態、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。如需磁碟限制的相關資訊、請參閱 <block ref="71ccaacc6f6c8feca068c7ff1a7b2eb5" category="inline-link-macro-rx"></block>。</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>。</block>
   <block id="6ed74a41a62734e492094462d818e839" category="paragraph">檢視Cloud Manager文件中的限制：<block ref="39ce2d41c9ed9c2da4c4794ff62efcad" category="inline-link-rx"></block></block>
@@ -503,4 +499,8 @@
   <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">使用 Azure VM 延伸功能的限制</block>
   <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAP 不支援部署中的 Azure 虛擬機器（ VM ）延伸功能和 VM 應用程式。在 Azure 中使用 Cloud Volumes ONTAP 搭配 VM 延伸功能會導致作業延遲， NetApp 建議您避免這些延遲。</block>
   <block id="415a4c0e58754d1017d75ef167c0e10e" category="sidebar">Cloud Volumes ONTAP 9.6 版本資訊</block>
+  <block id="0890aa708cef7529c2bd35cb7d2895df" category="list-text">如需 AWS 區域支援<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>、請參閱。</block>
+  <block id="f0de068c81c765820aca0fa8fe017396" category="list-text">如需 Azure 區域支援<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>、請參閱。</block>
+  <block id="ef9be83cb59b0572a3581a6724316e48" category="list-text">如需 Google Cloud Platform 地區支援、請參閱<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
+  <block id="26f113c6240bf0450440356676516cf1" category="paragraph"><block ref="26f113c6240bf0450440356676516cf1" category="inline-link-rx"></block></block>
 </blocks>

@@ -37,6 +37,6 @@ Azure不再支援全新部署Cloud Volumes ONTAP 的支援功能。您需要部�
 * 不支援 NFSv4 。支援 NFSv3 。
 * 某些地區不支援 HA 配對。
 +
-https://cloud.netapp.com/cloud-volumes-global-regions["請參閱支援的 Azure 地區清單"^]
+https://bluexp.netapp.com/cloud-volumes-global-regions["請參閱支援的 Azure 地區清單"^]
 
 

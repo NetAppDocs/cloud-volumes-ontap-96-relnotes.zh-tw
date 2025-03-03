@@ -66,7 +66,7 @@ Azure中提供的支援可作為單一節點系統、以及高可用度（HA）�
 附註：
 
 . 使用SSD時會啟用增強寫入效能、但使用DS3_v2虛擬機器類型時則不會啟用。
-. 如需Azure地區支援、請參閱 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]。
+. 如需 Azure 區域支援 https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]、請參閱。
 
 
 
@@ -109,7 +109,7 @@ Azure中提供的支援可作為單一節點系統、以及高可用度（HA）�
 |===
 附註：
 
-. 如需Azure地區支援、請參閱 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]。
+. 如需 Azure 區域支援 https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes全球區域"^]、請參閱。
 
 
 
